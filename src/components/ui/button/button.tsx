@@ -1,27 +1,23 @@
 'use client'
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import s from './button.module.css'
 
-interface ButtonProps {
-  children: React.ReactNode
-  onClick: () => void
+interface ButtonProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  'type'
+> {
+  text: string
   type?: 'default' | 'primary' | 'secondary' | 'text'
-  disabled?: boolean
 }
 
-const Button = ({
-  children,
-  onClick,
-  type = 'default',
-  disabled = false,
-}: ButtonProps) => {
+const Button = ({ text, type = 'default', ...props }: ButtonProps) => {
   return (
     <button
-      onClick={onClick}
+      onClick={props.onClick}
       className={`${s.btn} ${s[`btn-${type}`]}`}
-      disabled={disabled}
+      disabled={props.disabled}
     >
-      {children}
+      {text}
     </button>
   )
 }

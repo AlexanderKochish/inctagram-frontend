@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { fn } from 'storybook/test'
 
 import Button from './button'
-import React from 'react'
 
 const meta = {
   title: 'UI/Button',
@@ -36,7 +35,7 @@ type Story = StoryObj<typeof meta>
 export const Text: Story = {
   args: {
     type: 'text',
-    children: 'Text Button',
+    text: 'Text Button',
     disabled: false,
   },
 }
@@ -44,7 +43,7 @@ export const Text: Story = {
 export const Primary: Story = {
   args: {
     type: 'primary',
-    children: 'Primary Button',
+    text: 'Primary Button',
     disabled: false,
   },
 }
@@ -52,7 +51,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     type: 'secondary',
-    children: 'Secondary Button',
+    text: 'Secondary Button',
     disabled: false,
   },
 }
@@ -60,7 +59,7 @@ export const Secondary: Story = {
 export const Default: Story = {
   args: {
     type: 'default',
-    children: 'Default Button',
+    text: 'Default Button',
     disabled: false,
   },
 }
