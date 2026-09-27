@@ -1,0 +1,185 @@
+:root {
+  /* Accent Colors */
+  --color-accent-100: #73a5ff;
+  --color-accent-300: #4c8dff;
+  --color-accent-500: #397df6;
+  --color-accent-700: #2f68cc;
+  --color-accent-900: #234e99;
+  --color-accent: var(--color-accent-500);
+
+  /* Success Colors */
+  --color-success-100: #80ffbf;
+  --color-success-300: #22e584;
+  --color-success-500: #14cc70;
+  --color-success-700: #0f9954;
+  --color-success-900: #0a6638;
+  --color-success: var(--color-success-500);
+
+  /* Danger Colors */
+  --color-danger-100: #ff8099;
+  --color-danger-300: #f23d61;
+  --color-danger-500: #cc1439;
+  --color-danger-700: #990f2b;
+  --color-danger-900: #660a1d;
+  --color-danger: var(--color-danger-500);
+
+  /* Warning Colors */
+  --color-warning-100: #ffd073;
+  --color-warning-300: #e5ac39;
+  --color-warning-500: #d99000;
+  --color-warning-700: #996600;
+  --color-warning-900: #664400;
+  --color-warning: var(--color-warning-500);
+
+  /* Dark Colors */
+  --color-dark-100: #4c4c4c;
+  --color-dark-300: #333333;
+  --color-dark-500: #171717;
+  --color-dark-600: #212121;
+  --color-dark-700: #0d0d0d;
+  --color-dark-900: #000000;
+  --color-dark: var(--color-dark-500);
+
+  /* Light Colors */
+  --color-light-100: #ffffff;
+  --color-light-300: #f7fbff;
+  --color-light-500: #edf3fa;
+  --color-light-700: #d5dae0;
+  --color-light-900: #8d9094;
+  --color-light: var(--color-light-100);
+}
+
+/* Backgrounds */
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-accent-100 {
+  background-color: var(--color-accent-100);
+}
+.bg-accent-300 {
+  background-color: var(--color-accent-300);
+}
+.bg-accent-500 {
+  background-color: var(--color-accent-500);
+}
+.bg-accent-700 {
+  background-color: var(--color-accent-700);
+}
+.bg-accent-900 {
+  background-color: var(--color-accent-900);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-success-100 {
+  background-color: var(--color-success-100);
+}
+.bg-success-300 {
+  background-color: var(--color-success-300);
+}
+.bg-success-500 {
+  background-color: var(--color-success-500);
+}
+.bg-success-700 {
+  background-color: var(--color-success-700);
+}
+.bg-success-900 {
+  background-color: var(--color-success-900);
+}
+
+.bg-danger {
+  background-color: var(--color-danger);
+}
+.bg-danger-100 {
+  background-color: var(--color-danger-100);
+}
+.bg-danger-300 {
+  background-color: var(--color-danger-300);
+}
+.bg-danger-500 {
+  background-color: var(--color-danger-500);
+}
+.bg-danger-700 {
+  background-color: var(--color-danger-700);
+}
+.bg-danger-900 {
+  background-color: var(--color-danger-900);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-warning-100 {
+  background-color: var(--color-warning-100);
+}
+.bg-warning-300 {
+  background-color: var(--color-warning-300);
+}
+.bg-warning-500 {
+  background-color: var(--color-warning-500);
+}
+.bg-warning-700 {
+  background-color: var(--color-warning-700);
+}
+.bg-warning-900 {
+  background-color: var(--color-warning-900);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+.bg-dark-100 {
+  background-color: var(--color-dark-100);
+}
+.bg-dark-300 {
+  background-color: var(--color-dark-300);
+}
+.bg-dark-500 {
+  background-color: var(--color-dark-500);
+}
+.bg-dark-700 {
+  background-color: var(--color-dark-700);
+}
+.bg-dark-900 {
+  background-color: var(--color-dark-900);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+}
+.bg-light-100 {
+  background-color: var(--color-light-100);
+}
+.bg-light-300 {
+  background-color: var(--color-light-300);
+}
+.bg-light-500 {
+  background-color: var(--color-light-500);
+}
+.bg-light-700 {
+  background-color: var(--color-light-700);
+}
+.bg-light-900 {
+  background-color: var(--color-light-900);
+}
+
+/* Text Colors */
+.text-accent {
+  color: var(--color-accent);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-danger {
+  color: var(--color-danger);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+.text-dark {
+  color: var(--color-dark);
+}
+.text-light {
+  color: var(--color-light);
+}

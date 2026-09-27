@@ -1,0 +1,112 @@
+.btn {
+    width: 182px;
+    height: 36px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+}
+
+/* Default Button */
+.btn-default {
+    background-color: var(--color-accent);
+    color: var(--color-light-100);
+}
+
+.btn-default:hover {
+    background-color: var(--color-accent-100);
+    
+}
+
+.btn-default:active {
+    background-color: var(--color-accent-700);
+}
+
+.btn-default:focus {
+    border: 2px solid var(--color-accent-700);
+}
+
+.btn-default:disabled {
+    background-color: var(--color-accent-900);
+    color: var(--color-light-900);
+    cursor: not-allowed;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--color-dark-300);
+    color: var(--color-light-100);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark-100);
+}
+
+.btn-primary:active {
+    background-color: var(--color-dark-600);
+}
+
+.btn-primary:focus {
+    border: 2px solid var(--color-dark-300);
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-dark-900);
+    color: var(--color-light-900);
+    cursor: not-allowed;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: inherit;
+    color: var(--color-accent-500);
+    border: 2px solid var(--color-accent-500);
+}
+
+.btn-secondary:hover {
+    border: 2px solid var(--color-accent-100);
+    color: var(--color-accent-100);
+}
+
+.btn-secondary:active {
+    border: 2px solid var(--color-accent-700);
+    color: var(--color-accent-700);
+}
+
+.btn-secondary:focus {
+    border: 2px solid var(--color-accent-700);
+     color: var(--color-accent-700);
+}
+
+.btn-secondary:disabled {
+    background-color: var(--color-accent-900);
+    color: var(--color-light-900);
+    cursor: not-allowed;
+}
+
+/* Text Button */
+.btn-text {
+    background-color: inherit;
+    border: none;
+    color: var(--color-accent);
+}
+
+.btn-text:hover {
+    color: var(--color-accent-100);
+}
+
+.btn-text:active {
+    color: var(--color-accent-700);
+}
+
+.btn-text:focus {
+    border: 2px solid var(--color-accent-700);
+}
+
+.btn-text:disabled {
+    color: var(--color-accent-900);
+    cursor: not-allowed;
+}
