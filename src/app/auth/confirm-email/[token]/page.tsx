@@ -4,13 +4,13 @@ export default async function BlogPostPage({
   params: Promise<{ token: string }>
 }) {
   const { token } = await params
- 
+
   const res = await fetch(`http://localhost:3000/auth/confirm`, {
     method: 'POST',
-   headers: {
-      'Content-Type': 'application/json', 
+    headers: {
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ token }), 
+    body: JSON.stringify({ token }),
     cache: 'no-store',
   })
 

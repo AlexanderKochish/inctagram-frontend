@@ -1,118 +1,133 @@
 :root {
-/* Font Family */
---font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Font Family */
+  --font-family-base:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
 
-/* Font Sizes */
---font-size-large: 2.25rem; 
---font-size-h1: 1.875rem;   
---font-size-h2: 1.5rem;     
---font-size-h3: 1.25rem;   
---font-size-16: 1rem;       
---font-size-14: 0.875rem; 
---font-size-12: 0.75rem;   
+  /* Font Sizes */
+  --font-size-large: 2.25rem;
+  --font-size-h1: 1.875rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-16: 1rem;
+  --font-size-14: 0.875rem;
+  --font-size-12: 0.75rem;
 
-/* Font Weights */
---font-weight-regular: 400;
---font-weight-medium: 500;
---font-weight-semibold: 600;
---font-weight-bold: 700;
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-/* Line Heights */
---line-height-tight: 1.2;
---line-height-snug: 1.35;
---line-height-normal: 1.5;
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.5;
 }
 
 /* Base Body Setup */
 body {
-font-family: var(--font-family-base);
-font-size: var(--font-size-16);
-font-weight: var(--font-weight-regular);
-line-height: var(--line-height-normal);
-color: var(--color-dark, #171717);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-dark, #171717);
 }
 
 /* Large Title */
 .text-large {
-font-size: var(--font-size-large);
-font-weight: var(--font-weight-bold);
-line-height: var(--line-height-tight);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
 }
 
 /* Headings */
-h1, .h1 {
-font-size: var(--font-size-h1);
-font-weight: var(--font-weight-bold);
-line-height: var(--line-height-tight);
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
 }
 
-h2, .h2 {
-font-size: var(--font-size-h2);
-font-weight: var(--font-weight-bold);
-line-height: var(--line-height-snug);
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
 }
 
-h3, .h3 {
-font-size: var(--font-size-h3);
-font-weight: var(--font-weight-bold);
-line-height: var(--line-height-snug);
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
 }
 
 /* 16px Text Variants */
-.regular-text-16, .text-16-regular {
-font-size: var(--font-size-16);
-font-weight: var(--font-weight-regular);
+.regular-text-16,
+.text-16-regular {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
 }
 
-.bold-text-16, .text-16-bold {
-font-size: var(--font-size-16);
-font-weight: var(--font-weight-bold);
+.bold-text-16,
+.text-16-bold {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
 }
 
 /* 14px Text Variants */
-.regular-text-14, .text-14-regular {
-font-size: var(--font-size-14);
-font-weight: var(--font-weight-regular);
+.regular-text-14,
+.text-14-regular {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-regular);
 }
 
-.medium-text-14, .text-14-medium {
-font-size: var(--font-size-14);
-font-weight: var(--font-weight-medium);
+.medium-text-14,
+.text-14-medium {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
 }
 
-.bold-text-14, .text-14-bold {
-font-size: var(--font-size-14);
-font-weight: var(--font-weight-bold);
+.bold-text-14,
+.text-14-bold {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Small Text Variants (12px) */
-.small-text, .text-small {
-font-size: var(--font-size-12);
-font-weight: var(--font-weight-regular);
+.small-text,
+.text-small {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
 }
 
-.semibold-small-text, .text-small-semibold {
-font-size: var(--font-size-12);
-font-weight: var(--font-weight-semibold);
+.semibold-small-text,
+.text-small-semibold {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* Links */
-.regular-link, .link-regular {
-font-size: var(--font-size-14);
-font-weight: var(--font-weight-regular);
-color: var(--color-accent, #397DF6);
-text-decoration: underline;
-cursor: pointer;
+.regular-link,
+.link-regular {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-accent, #397df6);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.small-link, .link-small {
-font-size: var(--font-size-12);
-font-weight: var(--font-weight-regular);
-color: var(--color-accent, #397DF6);
-text-decoration: underline;
-cursor: pointer;
+.small-link,
+.link-small {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-accent, #397df6);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.regular-link:hover, .small-link:hover {
-color: var(--color-accent-700, #2F68CC);
+.regular-link:hover,
+.small-link:hover {
+  color: var(--color-accent-700, #2f68cc);
 }

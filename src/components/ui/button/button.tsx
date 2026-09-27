@@ -9,9 +9,18 @@ interface ButtonProps {
   disabled?: boolean
 }
 
-const Button = ({ children, onClick, type = 'text', disabled = false }: ButtonProps) => {
+const Button = ({
+  children,
+  onClick,
+  type = 'default',
+  disabled = false,
+}: ButtonProps) => {
   return (
-    <button onClick={onClick} className={`${s.btn} ${s[`btn-${type}`]}`} disabled={disabled}>
+    <button
+      onClick={onClick}
+      className={`${s.btn} ${s[`btn-${type}`]}`}
+      disabled={disabled}
+    >
       {children}
     </button>
   )

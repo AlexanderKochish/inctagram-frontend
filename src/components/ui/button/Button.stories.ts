@@ -1,10 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
-import { fn } from 'storybook/test';
+import { fn } from 'storybook/test'
 
-import Button from './button';
-import React from 'react';
-
+import Button from './button'
+import React from 'react'
 
 const meta = {
   title: 'UI/Button',
@@ -29,10 +28,10 @@ const meta = {
     },
   },
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Text: Story = {
   args: {
