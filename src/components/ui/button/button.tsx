@@ -6,11 +6,12 @@ interface ButtonProps {
   children: React.ReactNode
   onClick: () => void
   type?: 'default' | 'primary' | 'secondary' | 'text'
+  disabled?: boolean
 }
 
-const Button = ({ children, onClick, type = 'text' }: ButtonProps) => {
+const Button = ({ children, onClick, type = 'text', disabled = false }: ButtonProps) => {
   return (
-    <button onClick={onClick} className={`${s.btn} ${s[`btn-${type}`]}`}>
+    <button onClick={onClick} className={`${s.btn} ${s[`btn-${type}`]}`} disabled={disabled}>
       {children}
     </button>
   )

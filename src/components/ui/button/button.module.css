@@ -18,7 +18,7 @@
 
 .btn-default:hover {
     background-color: var(--color-accent-100);
-    
+    border: none;
 }
 
 .btn-default:active {
@@ -54,7 +54,7 @@
 }
 
 .btn-primary:disabled {
-    background-color: var(--color-dark-900);
+    background-color: var(--color-dark-500);
     color: var(--color-light-900);
     cursor: not-allowed;
 }
