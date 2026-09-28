@@ -8,13 +8,23 @@ interface ButtonProps extends Omit<
 > {
   text: string
   type?: 'default' | 'primary' | 'secondary' | 'text'
+  fullSize?: boolean
 }
 
-const Button = ({ text, type = 'default', ...props }: ButtonProps) => {
+const Button = ({
+  text,
+  type = 'default',
+  fullSize,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       onClick={props.onClick}
-      className={`${s.btn} ${s[`btn-${type}`]}`}
+      className={
+        fullSize
+          ? `${s.btn} ${s.full} ${s[`btn-${type}`]}`
+          : `${s.btn} ${s[`btn-${type}`]}`
+      }
       disabled={props.disabled}
     >
       {text}
