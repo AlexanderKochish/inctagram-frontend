@@ -1,0 +1,111 @@
+.trigger {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  padding: 6px 12px;
+  font-size: var(--font-size-16);
+  line-height: 2rem;
+  height: 36px;
+  width: 100%;
+  width: 210px;
+  gap: 5px;
+  background-color: var(--color-dark-500);
+  color: var(--color-light-100);
+  border: 1px solid var(--color-light-100);
+  cursor: pointer;
+  /* &:hover {
+    background-color: var(--color-dark-300);
+    color: var(--color-accent-500);
+  } */
+  &:focus {
+    border: 1px solid var(--color-accent-500);
+  }
+  &[data-placeholder] {
+    color: var(--color-light-100);
+  }
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  color: var(--color-light-100);
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  transition: transform 200ms ease;
+}
+
+.trigger[data-state='open'] .chevron {
+  transform: rotate(180deg);
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.content {
+  overflow: hidden;
+  background-color: var(--color-dark-500);
+  border-radius: 2px;
+  width: 210px;
+
+  position: absolute;
+  top: 53px;
+  left: 0px;
+  width: 100%;
+  border: 1px solid var(--color-light-100);
+  z-index: 101;
+}
+
+/* .Viewport {
+  position: absolute;
+  top: 25px;
+  left: -20px !important;
+  padding: 5px;
+  width: 210px;
+  border: 1px solid var(--color-light-100);
+} */
+
+.item {
+  font-size: var(--font-size-16);
+  line-height: 24px;
+  color: var(--color-light-100);
+  display: flex;
+  align-items: center;
+  padding: 7px 12px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  &[data-disabled] {
+    color: var(--mauve-8);
+    pointer-events: none;
+  }
+  &[data-highlighted] {
+    outline: none;
+    background-color: var(--color-dark-300);
+    color: var(--color-accent-500);
+  }
+}
+
+.itemIndicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: white;
+  color: var(--color-dark-500);
+  cursor: default;
+}

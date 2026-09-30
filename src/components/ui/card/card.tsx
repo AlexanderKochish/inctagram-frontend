@@ -9,7 +9,7 @@ interface Props {
 
 const Card = ({ width = 100, height = 100, children }: Props) => {
   return (
-    <div style={{ height, width }} className={s.card}>
+    <div style={{ minHeight: height, width }} className={s.card}>
       {children}
     </div>
   )

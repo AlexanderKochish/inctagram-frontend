@@ -61,7 +61,7 @@ const SignIn = () => {
               placeholder="Password"
             />
             <div className={s.forgotpass_link}>
-              <a href="#">Forgot Password</a>
+              <Link href="/auth/forgot-password">Forgot Password</Link>
             </div>
             <Button
               fullSize
