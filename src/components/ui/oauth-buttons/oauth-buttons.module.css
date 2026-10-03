@@ -1,0 +1,15 @@
+.oauth_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 24px;
+}
+
+.oauth_btn {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+}

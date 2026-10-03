@@ -7,11 +7,11 @@ interface CheckBoxProps extends Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   'type'
 > {
-  text?: string
+  text?: React.ReactNode
 }
 
 export const CheckBox = ({
-  text = 'Click me',
+  text,
   checked: controlledChecked,
   defaultChecked = false,
   disabled = false,
@@ -48,7 +48,7 @@ export const CheckBox = ({
           className={`${s.custom_checkbox} ${isChecked ? s.checked : ''}`}
         />
       </span>
-      {text && <span>{text}</span>}
+      {text}
     </label>
   )
 }
