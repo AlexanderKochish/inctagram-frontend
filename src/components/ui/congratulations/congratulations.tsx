@@ -4,7 +4,7 @@ import Link from 'next/link'
 import CongratulationsImage from '../../../../public/bro.svg'
 import s from './congratulations.module.css'
 
-const CongratulationsPage = () => {
+const Congratulations = () => {
   return (
     <div className={s.container}>
       <h1>Congratulations!</h1>
@@ -13,6 +13,7 @@ const CongratulationsPage = () => {
         <Button text="Sign In" />
       </Link>
       <Image
+        loading="eager"
         src={CongratulationsImage}
         alt="Congratulations"
         width={432}
@@ -22,4 +23,4 @@ const CongratulationsPage = () => {
   )
 }
 
-export default CongratulationsPage
+export default Congratulations

@@ -1,4 +1,7 @@
-export default async function BlogPostPage({
+import Congratulations from '@/src/components/ui/congratulations/congratulations'
+import { ResendVerificationLink } from '@/src/components/ui/resend-verification-link/resend-verification-link'
+
+export default async function ConfirmEmailPage({
   params,
 }: {
   params: Promise<{ token: string }>
@@ -14,13 +17,5 @@ export default async function BlogPostPage({
     cache: 'no-store',
   })
 
-  return (
-    <div>
-      {res.ok ? (
-        <p>Email confirmed successfully!</p>
-      ) : (
-        <p>Failed to confirm email. Please try again.</p>
-      )}
-    </div>
-  )
+  return <>{res.ok ? <Congratulations /> : <ResendVerificationLink />}</>
 }
