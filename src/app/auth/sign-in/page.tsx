@@ -39,6 +39,7 @@ const SignIn = () => {
               labelText="Password"
               inputType="password"
               placeholder="Password"
+              eyePassword
             />
             <div className={s.forgotpass_link}>
               <Link href="/auth/forgot-password">Forgot Password</Link>

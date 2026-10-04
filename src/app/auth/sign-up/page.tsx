@@ -47,6 +47,7 @@ const SignUp = () => {
               labelText="Password"
               inputType="password"
               placeholder="Password"
+              eyePassword
             />
             <CustomInput
               control={control}
@@ -54,6 +55,7 @@ const SignUp = () => {
               labelText="Password confirmation"
               inputType="password"
               placeholder="Password confirmation"
+              eyePassword
             />
             <div className={s.checkbox_wrapper}>
               <CheckBox
