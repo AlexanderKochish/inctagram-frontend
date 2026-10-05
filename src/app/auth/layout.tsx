@@ -1,4 +1,3 @@
-import Header from '@/src/components/ui/header/header'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
@@ -21,7 +20,6 @@ export default function AuthLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <Header />
         <div className="container">{children}</div>
       </body>
     </html>

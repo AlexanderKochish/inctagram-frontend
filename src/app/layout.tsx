@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import '../styles/globals.css'
+import Header from '../components/ui/header/header'
+import Sidebar from '../components/ui/sidebar/sidebar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,12 +20,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
+  const isAuth = false
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <div className="layout">
+          <Header />
+          {isAuth && <Sidebar />}
+          <main className="main">
+            <div className="container">{children}</div>
+          </main>
+        </div>
+      </body>
     </html>
   )
 }

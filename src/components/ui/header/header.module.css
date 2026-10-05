@@ -18,3 +18,15 @@
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-semibold);
 }
+
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}

@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -16,4 +17,16 @@ body {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
 }

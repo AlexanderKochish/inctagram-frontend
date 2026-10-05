@@ -69,7 +69,7 @@ const SignUp = () => {
               />
             </div>
             <Button
-              fullSize
+              fullWidth
               onClick={() => handleSubmit(onSubmit)}
               text="Sign Up"
             />
@@ -77,7 +77,7 @@ const SignUp = () => {
           <div className={s.form_link}>
             <p>Do you have an account?</p>
             <Link href={'/auth/sign-in'}>
-              <Button type="text" text="Sign In" />
+              <Button variant="text" text="Sign In" />
             </Link>
           </div>
         </div>

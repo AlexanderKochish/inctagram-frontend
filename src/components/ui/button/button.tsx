@@ -7,23 +7,23 @@ interface ButtonProps extends Omit<
   'type'
 > {
   text: string
-  type?: 'default' | 'primary' | 'secondary' | 'text'
-  fullSize?: boolean
+  variant?: 'default' | 'primary' | 'secondary' | 'text'
+  fullWidth?: boolean
 }
 
 const Button = ({
   text,
-  type = 'default',
-  fullSize,
+  variant = 'default',
+  fullWidth,
   ...props
 }: ButtonProps) => {
   return (
     <button
       onClick={props.onClick}
       className={
-        fullSize
-          ? `${s.btn} ${s.full} ${s[`btn-${type}`]}`
-          : `${s.btn} ${s[`btn-${type}`]}`
+        fullWidth
+          ? `${s.btn} ${s.full} ${s[`btn-${variant}`]}`
+          : `${s.btn} ${s[`btn-${variant}`]}`
       }
       disabled={props.disabled}
     >

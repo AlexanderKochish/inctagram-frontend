@@ -45,7 +45,7 @@ const SignIn = () => {
               <Link href="/auth/forgot-password">Forgot Password</Link>
             </div>
             <Button
-              fullSize
+              fullWidth
               onClick={() => handleSubmit(onSubmit)}
               text="Sign In"
             />
@@ -53,7 +53,7 @@ const SignIn = () => {
           <div className={s.form_link}>
             <p>Don’t have an account?</p>
             <Link href={'/auth/sign-up'}>
-              <Button type="text" text="Sign Up" />
+              <Button variant="text" text="Sign Up" />
             </Link>
           </div>
         </div>

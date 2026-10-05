@@ -39,9 +39,9 @@ const ForgotPasswordPage = () => {
             <p>
               Enter your email address and we will send you further instructions
             </p>
-            <Button fullSize text="Send Link" />
+            <Button fullWidth text="Send Link" />
           </form>
-          <Button fullSize text="Back to Sign In" type="text" />
+          <Button fullWidth text="Back to Sign In" variant="text" />
           <div className={s.recaptcha}>
             <ReCAPTCHA
               ref={recaptchaRef}
