@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import s from './post-card.module.css'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 interface Post {
   post: {
@@ -10,11 +11,12 @@ interface Post {
     username: string
     timestamp: string
     desc: string
+    authorId: string
   }
 }
 
 const PostCard = ({
-  post: { avatar, desc, img, timestamp, username },
+  post: { avatar, desc, img, timestamp, username, authorId },
 }: Post) => {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
@@ -25,17 +27,19 @@ const PostCard = ({
         src={img}
         alt="post image"
       />
-      <div className={s.user}>
-        <Image
-          className={s.avatar}
-          loading="eager"
-          src={avatar}
-          alt="post image"
-          width={50}
-          height={50}
-        />
-        <span className={s.name}>{username}</span>
-      </div>
+      <Link className={s.profile_link} href={`/profile/${authorId}`}>
+        <div className={s.user}>
+          <Image
+            className={s.avatar}
+            loading="eager"
+            src={avatar}
+            alt="post image"
+            width={50}
+            height={50}
+          />
+          <span className={s.name}>{username}</span>
+        </div>
+      </Link>
       <div className={s.time}>{timestamp}</div>
       <p className={s.text}>
         {isExpanded ? desc : `${desc.slice(0, 80)}... `}

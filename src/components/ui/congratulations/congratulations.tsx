@@ -10,8 +10,9 @@ const Congratulations = () => {
       <h1>Congratulations!</h1>
       <p>Your email has been confirmed.</p>
       <Link href="/auth/sign-in">
-        <Button text="Sign In" />
+        <Button size="large" text="Sign In" />
       </Link>
+
       <Image
         loading="eager"
         src={CongratulationsImage}

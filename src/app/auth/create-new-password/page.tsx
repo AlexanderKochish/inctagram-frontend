@@ -40,7 +40,7 @@ const CreateNewPassword = () => {
               eyePassword
             />
             <p>Your password must be between 6 and 20 characters</p>
-            <Button fullWidth text="Create New Password" />
+            <Button size="large" text="Create New Password" />
           </form>
         </div>
       </Card>

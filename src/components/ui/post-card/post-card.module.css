@@ -50,3 +50,6 @@
   height: 120px;
   object-fit: cover;
 }
+.profile_link {
+  color: var(--color-light-100);
+}

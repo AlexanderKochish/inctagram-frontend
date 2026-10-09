@@ -45,7 +45,7 @@ const SignIn = () => {
               <Link href="/auth/forgot-password">Forgot Password</Link>
             </div>
             <Button
-              fullWidth
+              size="large"
               onClick={() => handleSubmit(onSubmit)}
               text="Sign In"
             />

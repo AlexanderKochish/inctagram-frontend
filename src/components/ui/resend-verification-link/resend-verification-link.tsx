@@ -29,7 +29,7 @@ export const ResendVerificationLink = () => {
           labelText="Email"
           inputType="email"
         />
-        <Button text="Resend verification link" fullWidth />
+        <Button text="Resend verification link" size="large" />
       </form>
       <Image
         loading="eager"

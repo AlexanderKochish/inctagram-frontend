@@ -6,6 +6,7 @@ import RegisteredUsers from '../components/ui/registered-users/registered-users'
 const posts = [
   {
     id: 1,
+    authorId: '2jhghjg2',
     img: PostImage,
     avatar: PostImage,
     username: 'Username',
@@ -14,6 +15,7 @@ const posts = [
   },
   {
     id: 2,
+    authorId: '2jhghjg2',
     img: PostImage,
     avatar: PostImage,
     username: 'Username',
@@ -22,6 +24,7 @@ const posts = [
   },
   {
     id: 3,
+    authorId: '2jhghjg2',
     img: PostImage,
     avatar: PostImage,
     username: 'Username',
@@ -30,6 +33,7 @@ const posts = [
   },
   {
     id: 4,
+    authorId: '2jhghjg2',
     img: PostImage,
     avatar: PostImage,
     username: 'Username',

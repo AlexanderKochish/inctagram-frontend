@@ -9,8 +9,11 @@ import { useForm } from 'react-hook-form'
 import Link from 'next/link'
 import Button from '@/src/components/ui/button/button'
 import CheckBox from '@/src/components/ui/check-box/check-box'
+import DialogDemo from '@/src/components/ui/modal/modal'
+import { useState } from 'react'
 
 const SignUp = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const { handleSubmit, control } = useForm<SignUpSchemaType>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: {
@@ -19,7 +22,10 @@ const SignUp = () => {
     },
   })
 
-  const onSubmit = (data: SignUpSchemaType) => console.log(data)
+  const onSubmit = (data: SignUpSchemaType) => {
+    console.log(data)
+    setIsOpen((prev) => !prev)
+  }
   return (
     <div className={s.container}>
       <Card width={378} height={504}>
@@ -69,7 +75,7 @@ const SignUp = () => {
               />
             </div>
             <Button
-              fullWidth
+              size="large"
               onClick={() => handleSubmit(onSubmit)}
               text="Sign Up"
             />
@@ -82,6 +88,17 @@ const SignUp = () => {
           </div>
         </div>
       </Card>
+      <DialogDemo isOpen={isOpen} setIsOpen={setIsOpen} title="Email sent">
+        <div className={s.modal_content}>
+          <p>
+            We have sent a link to confirm your email to
+            <br /> epam@epam.com
+          </p>
+          <div className={s.modal_btn}>
+            <Button size="small" text="OK" />
+          </div>
+        </div>
+      </DialogDemo>
     </div>
   )
 }

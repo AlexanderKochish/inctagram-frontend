@@ -1,4 +1,4 @@
-import React from 'react'
+'use client'
 import s from './profile.module.css'
 import Image from 'next/image'
 import Avatar from '../../../../public/Mask group.jpg'
