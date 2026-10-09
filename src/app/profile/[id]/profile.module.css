@@ -1,0 +1,55 @@
+.container {
+  color: var(--color-light-100);
+  padding-top: 96px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.avatar {
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+}
+.details_wrapper {
+  display: flex;
+  gap: 38px;
+  margin-bottom: 48px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.followers_list {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  & > li {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: var(--font-size-14);
+
+    & .num {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--color-accent);
+  font-size: var(--font-size-16);
+}
+
+.posts_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.post_img {
+  width: 234px;
+  height: 228px;
+}
