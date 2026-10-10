@@ -9,8 +9,8 @@ import { useForm } from 'react-hook-form'
 import Link from 'next/link'
 import Button from '@/src/components/ui/button/button'
 import CheckBox from '@/src/components/ui/check-box/check-box'
-import DialogDemo from '@/src/components/ui/modal/modal'
 import { useState } from 'react'
+import Modal from '@/src/components/ui/modal/modal'
 
 const SignUp = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -88,7 +88,7 @@ const SignUp = () => {
           </div>
         </div>
       </Card>
-      <DialogDemo isOpen={isOpen} setIsOpen={setIsOpen} title="Email sent">
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Email sent">
         <div className={s.modal_content}>
           <p>
             We have sent a link to confirm your email to
@@ -98,7 +98,7 @@ const SignUp = () => {
             <Button size="small" text="OK" />
           </div>
         </div>
-      </DialogDemo>
+      </Modal>
     </div>
   )
 }

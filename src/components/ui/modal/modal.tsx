@@ -10,7 +10,7 @@ interface ModalProps {
   children?: React.ReactNode
 }
 
-const DialogDemo = ({ isOpen, setIsOpen, title, children }: ModalProps) => (
+const Modal = ({ isOpen, setIsOpen, title, children }: ModalProps) => (
   <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
     <Dialog.Portal>
       <Dialog.Overlay className={s.overlay} />
@@ -33,4 +33,4 @@ const DialogDemo = ({ isOpen, setIsOpen, title, children }: ModalProps) => (
   </Dialog.Root>
 )
 
-export default DialogDemo
+export default Modal
