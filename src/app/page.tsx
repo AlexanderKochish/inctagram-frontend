@@ -1,3 +1,4 @@
+'use client'
 import PostImage from '../../public/Mask group.jpg'
 import s from './home.module.css'
 import PostCard from '../components/ui/post-card/post-card'

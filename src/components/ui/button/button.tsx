@@ -1,11 +1,7 @@
 'use client'
 import React, { ButtonHTMLAttributes } from 'react'
 import s from './button.module.css'
-
-interface ButtonProps extends Omit<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  'type'
-> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
   variant?: 'default' | 'primary' | 'secondary' | 'text'
   size?: 'small' | 'default' | 'large'
