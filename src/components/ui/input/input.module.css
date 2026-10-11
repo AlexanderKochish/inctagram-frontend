@@ -44,7 +44,7 @@
   border: 2px solid var(--color-light-900);
 }
 
-.input_wrapper:focus {
+.input_wrapper:focus-visible {
   border: none;
   color: var(--color-light-100);
   border: 2px solid var(--color-accent);
@@ -73,6 +73,7 @@
 
 .error {
   color: var(--color-danger-500);
+  font-size: var(--font-size-14);
 }
 
 .eye_button {
