@@ -13,6 +13,7 @@
 .list_wrapper {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .trigger {
@@ -20,9 +21,11 @@
   font-family: inherit;
   background-color: inherit;
   cursor: pointer;
-  width: 85px;
+  align-items: center;
+  justify-content: center;
   padding: 6px 24px 6px 23px;
   height: 36px;
+
   flex: 1;
   display: flex;
   align-items: center;
@@ -40,7 +43,6 @@
   }
 
   &[data-state='active'] {
-    background-color: rgba(10, 93, 165, 0.301);
     border-bottom: 2px solid var(--color-accent);
     color: var(--color-accent);
   }

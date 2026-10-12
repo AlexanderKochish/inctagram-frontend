@@ -30,7 +30,10 @@
     outline: 1px solid var(--color-accent-500, #397dfa);
   }
 }
-
+.label {
+  color: var(--color-light-900);
+  font-size: var(--font-size-14);
+}
 .icon {
   color: var(--color-light-900, #888);
   flex-shrink: 0;

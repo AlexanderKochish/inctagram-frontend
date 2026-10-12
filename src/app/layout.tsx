@@ -26,7 +26,8 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       <body>
         <div className="layout">
           <Header />
-          {isAuth && <Sidebar />}
+          {/* {isAuth && <Sidebar />} */}
+          <Sidebar />
           <main className="main">
             <div className="container">{children}</div>
           </main>

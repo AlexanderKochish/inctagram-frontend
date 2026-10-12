@@ -15,9 +15,10 @@ interface TabsContentProps {
 interface TabsProps {
   tabs: TabsTitleProps[]
   content: TabsContentProps[]
+  width?: number
 }
 
-const CustomTabs = ({ tabs, content }: TabsProps) => (
+const CustomTabs = ({ tabs, content, width }: TabsProps) => (
   <Tabs.Root className={s.root} defaultValue={tabs[0].value}>
     <div className={s.list_wrapper}>
       {tabs.map(({ value, title }) => (
@@ -26,7 +27,11 @@ const CustomTabs = ({ tabs, content }: TabsProps) => (
           className={s.list}
           aria-label="Manage your account"
         >
-          <Tabs.Trigger className={s.trigger} value={value}>
+          <Tabs.Trigger
+            style={{ width: `${width}px` }}
+            className={s.trigger}
+            value={value}
+          >
             {title}
           </Tabs.Trigger>
         </Tabs.List>

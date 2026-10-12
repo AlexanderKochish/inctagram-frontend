@@ -1,7 +1,8 @@
+'use client'
 import { Select } from 'radix-ui'
 import classnames from 'classnames'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
-import styles from './select.module.css'
+import s from './select.module.css'
 import { forwardRef, Ref } from 'react'
 import Image, { StaticImageData } from 'next/image'
 
@@ -22,6 +23,7 @@ interface SelectProps {
   placeholder?: string
   defaultValue?: string
   areaLabel: string
+  label?: string
 }
 
 const SelectCustom = ({
@@ -29,39 +31,43 @@ const SelectCustom = ({
   defaultValue,
   placeholder,
   areaLabel,
+  label,
 }: SelectProps) => {
   return (
     <Select.Root defaultValue={defaultValue}>
-      <Select.Trigger className={styles.trigger} aria-label={areaLabel}>
-        <Select.Value placeholder={placeholder} />
-        <Select.Icon className={styles.icon}>
-          <ChevronDownIcon className={styles.chevron} />
-        </Select.Icon>
-      </Select.Trigger>
-      <Select.Portal>
-        <Select.Content className={styles.content}>
-          <Select.Viewport className={styles.viewport}>
-            <Select.Group>
-              {list &&
-                list.map(({ id, image, text, value }) => (
-                  <SelectItem key={id} value={value}>
-                    <div className={styles.item}>
-                      {image && (
-                        <Image
-                          src={image}
-                          alt="flag icon"
-                          width={24}
-                          height={24}
-                        />
-                      )}
-                      <span>{text}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-            </Select.Group>
-          </Select.Viewport>
-        </Select.Content>
-      </Select.Portal>
+      <div className={s.root}>
+        {label && <span className={s.label}>{label}</span>}
+        <Select.Trigger className={s.trigger} aria-label={areaLabel}>
+          <Select.Value placeholder={placeholder} />
+          <Select.Icon className={s.icon}>
+            <ChevronDownIcon className={s.chevron} />
+          </Select.Icon>
+        </Select.Trigger>
+        <Select.Portal>
+          <Select.Content className={s.content}>
+            <Select.Viewport className={s.viewport}>
+              <Select.Group>
+                {list &&
+                  list.map(({ id, image, text, value }) => (
+                    <SelectItem key={id} value={value}>
+                      <div className={s.item}>
+                        {image && (
+                          <Image
+                            src={image}
+                            alt="flag icon"
+                            width={24}
+                            height={24}
+                          />
+                        )}
+                        <span>{text}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
+              </Select.Group>
+            </Select.Viewport>
+          </Select.Content>
+        </Select.Portal>
+      </div>
     </Select.Root>
   )
 }
@@ -72,14 +78,12 @@ const SelectItem = forwardRef(function SelectItem(
 ) {
   return (
     <Select.Item
-      className={classnames(styles.item, className)}
+      className={classnames(s.item, className)}
       {...props}
       ref={forwardedRef}
     >
       <Select.ItemText>{children}</Select.ItemText>
-      <Select.ItemIndicator
-        className={styles.itemIndicator}
-      ></Select.ItemIndicator>
+      <Select.ItemIndicator className={s.itemIndicator}></Select.ItemIndicator>
     </Select.Item>
   )
 })

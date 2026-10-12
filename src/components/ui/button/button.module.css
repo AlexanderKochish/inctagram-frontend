@@ -1,5 +1,4 @@
 .btn {
-  width: 182px;
   height: 36px;
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
@@ -117,7 +116,7 @@
 }
 
 .size-default {
-  width: 182px;
+  min-width: 182px;
 }
 
 .size-large {

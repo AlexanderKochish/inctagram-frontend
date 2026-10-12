@@ -33,7 +33,7 @@
   outline: none;
 }
 .label {
-  font-size: var(--font-size-16);
+  font-size: var(--font-size-14);
 }
 .input_wrapper:active {
   color: var(--color-light-100);
@@ -44,10 +44,9 @@
   border: 2px solid var(--color-light-900);
 }
 
-.input_wrapper:focus-visible {
-  border: none;
-  color: var(--color-light-100);
+.input_wrapper:focus-within {
   border: 2px solid var(--color-accent);
+  color: var(--color-light-100);
 }
 
 .input_wrapper:disabled {

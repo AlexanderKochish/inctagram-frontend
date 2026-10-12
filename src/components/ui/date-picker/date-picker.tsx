@@ -27,7 +27,7 @@ export const DatePicker = ({
   return (
     <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
       <div className={s.trigger_wrapper}>
-        <span>{placeholder}</span>
+        <span className={s.label}>{placeholder}</span>
         <Popover.Trigger asChild>
           <button
             type="button"

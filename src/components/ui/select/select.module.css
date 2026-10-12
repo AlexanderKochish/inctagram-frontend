@@ -8,8 +8,7 @@
   font-size: var(--font-size-16);
   line-height: 2rem;
   height: 36px;
-  width: 100%;
-  width: 210px;
+
   gap: 5px;
   background-color: var(--color-dark-500);
   color: var(--color-light-100);
@@ -27,6 +26,13 @@
   }
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  color: var(--color-light-900);
+}
 .icon {
   display: grid;
   place-items: center;
